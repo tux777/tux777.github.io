@@ -1,0 +1,87 @@
+:root {
+    --bg-color: #05051d;
+    --accent-color: rgb(41, 26, 124)
+
+}
+
+@font-face {
+    font-family: "Sofia Pro Reg";
+    src: url("../assets/fonts/Sofia_Pro_Regular.otf");
+}
+
+body {
+    position: relative;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+p {
+    font-family: "Sofia Pro Reg";
+}
+
+h1 {
+    font-family: "Sofia Pro Reg";
+}
+
+.tnav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tnav button{
+    background: transparent;
+    color: #d3d3d3;
+    padding: 7px;
+    border-width: thin;
+    border-style: solid;
+    border-radius: 6px;
+    border-color: beige;
+    transition: border-color 0.2s;
+    width: 150px;
+    margin: 5px;
+}
+
+.tnav button:hover{
+    border-color: var(--accent-color);
+    transition: 0.2s;
+}
+
+.tnav button:left{
+    border-color: #d3d3d3;
+    transition: 0.2s;
+}
+
+.tnav button:focus{
+    outline: none;
+    border-color: var(--accent-color);
+    transition: 0.2s;
+}
+
+.moreme {
+    position: relative;
+    top: 50%;
+    transform: translateY(-100%);
+    text-align: center;
+    color: #d3d3d3;
+};
+
+a:link {
+    color: var(--accent-color);
+}
+
+a:visited {
+    color: var(--accent-color)
+}
