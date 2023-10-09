@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Gabarito', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    background-color: black;
+    transition: opacity 0.5s ease-in;
+}
+
+.top {
+    display: flex;
+    position: relative;
+    height: 48px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+}
+
+.top > div {
+    background-color: rgba(0, 0, 0, 0.6)
+}
+
+.top-nav {
+    font-weight: 650;
+    display: flex;
+    border: 1.5px solid orange;
+    align-items: center;
+    height: 48px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 7px;
+    transition: transform .2s;
+}
+
+.top-social {
+    font-weight: 650;
+    display: flex;
+    border: 1.5px solid orange;
+    position: absolute; 
+    padding-left: 10px;
+    padding-right: 10px;
+    right: 0px; /* Align social media links to right */ 
+    height: 48px;
+    align-items: center;
+    border-radius: 7px;
+    transition: transform .2s, border-color ease .3s;
+}
+
+.top-social > button:first-child {
+    padding-right: 10px;
+}
+
+.top-nav > button:first-child {
+    padding-right: 10px;
+}
+
+.top-nav > button:not(:last-child) {
+    padding-right: 10px;
+}
+
+.top-social > button {
+    font-size: 16px;
+    border: 0px;
+    background-color: transparent;
+    color: white;
+    cursor:default;
+    text-decoration: none;
+    pointer-events: auto;
+    transition: transform .2s;
+}
+
+.top-nav:has(button:hover){
+    transform: scaleX(1.1);
+}
+
+.top-nav > button:hover {
+    transform: scale(1.1);
+}
+
+.top-social:has(button:hover){
+    transform: scaleX(1.1);
+}
+
+.top-social > button:hover {
+    transform: scaleY(1.1);
+}
+
+.top-nav > button {
+    font-size: 16px;
+    border: 0px;
+    background-color: transparent;
+    color: white;
+    cursor: default;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: transform .2s;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#greeting {
+    border-right: 4px solid;
+    font-weight: bolder;
+    color: white;
+    position: relative;
+    text-align: center;
+    height: fit-content;
+    white-space: nowrap;
+    margin-bottom: 50px;
+    overflow: hidden;
+    font-size: 40px;
+    width: 0;
+    animation: blink 1s ease infinite alternate;
+}
+
+#info {
+    align-self: center;
+    color: white;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 900;
+    width: max-content;
+    height: fit-content;
+    margin-bottom: 50px;
+}
+
+#credits {
+    position: absolute;
+}
+
+::selection {
+    background-color: orange;
+}
+
+.video-background {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    -o-filter: blur(15px);
+    filter: blur(25px);
+}
+
+@keyframes blink {
+    50% {
+      border-color: transparent
+    }
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
