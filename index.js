@@ -15,6 +15,12 @@ window.onload = function(){
     var tooltip = document.getElementById('tooltip');
     var github_social = document.getElementById('social-1');
     var threads_social = document.getElementById('social-2');
+    var main = document.getElementsByClassName("main")[0];
+    main.addEventListener("mousemove", () => {
+        if (tooltip.style.opacity > 0) {
+            tooltip.style.opacity = 0;
+        }
+    })
 
     buttons = [github_social, threads_social]
 
