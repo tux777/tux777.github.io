@@ -11,6 +11,36 @@ window.onload = function(){
             socialBar.style.borderColor = "orange"
         },600)
     }
+
+    var tooltip = document.getElementById('tooltip');
+    var github_social = document.getElementById('social-1');
+    var threads_social = document.getElementById('social-2');
+
+    buttons = [github_social, threads_social]
+
+    for (let i=0; i<buttons.length; i++) {
+        buttons[i].addEventListener("mouseenter", tooltipEnterFunc, false)
+        buttons[i].addEventListener("mousemove", tooltipMoveFunc, false)
+        buttons[i].addEventListener("mouseleave", tooltipLeaveFunc, false)
+    }
+
+    function tooltipEnterFunc(e) {
+        console.log("Mouse has entered")
+        setTimeout(() => {
+            tooltip.style.opacity = "1";
+        }, 500)
+    }
+
+    function tooltipMoveFunc(e) {
+        tooltip.style.left = e.pageX - 30 + 'px';
+        tooltip.style.top = e.pageY + 5 + 'px';
+    }
+
+    function tooltipLeaveFunc(e) {
+        console.log("Mouse Has Left")
+        tooltip.style.opacity = "0";
+    }
+
     // Typewriter effect
     const html = document.getElementsByTagName("html")[0];
     var width = "";

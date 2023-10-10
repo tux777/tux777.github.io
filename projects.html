@@ -25,6 +25,7 @@
             <source src="imgs/video.mp4" type="video/mp4">
         </video>
         <div class="top">
+            <div id="tooltip"><p id="tooltip-text">tooltip</p></div>
             <div id="nav-bar" class="top-nav">
                 <button id="home-page" onclick="location.href='/'">Home</button>
                 <button id="about-page" onclick="location.href='/about'">About</button>
@@ -32,8 +33,8 @@
                 <button id="social-indicator-toggle">Social</button>
             </div>
             <div id="social-bar" class="top-social">
-                <button id="social-1" onclick="window.open('https://github.com/tux777/', '_blank')"><span class="fa-brands fa-github fa-xl"></span></button>
-                <button id="social-2" onclick="window.open('https://www.threads.net/@tux777_', '_blank')"><span class="fa-brands fa-threads fa-xl"></span></button>
+                <button id="social-1" onmouseenter="document.getElementById('tooltip-text').textContent = 'Github'" onclick="window.open('https://github.com/tux777/', '_blank')"><span class="fa-brands fa-github fa-xl"></span></button>
+                <button id="social-2" onmouseenter="document.getElementById('tooltip-text').textContent = 'Threads'" onclick="window.open('https://www.threads.net/@tux777_', '_blank')"><span class="fa-brands fa-threads fa-xl"></span></button>
             </div>
         </div>
         <div class="main">

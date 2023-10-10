@@ -15,6 +15,25 @@ body {
     transition: opacity 0.5s ease-in;
 }
 
+#tooltip {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    border: 1px solid orange;
+    position: absolute;
+    border-radius: 3px;
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    justify-self: center;
+    transition: opacity 90ms ease-in;
+}
+
+#tooltip-text {
+    text-align: center;
+    color: white;
+}
+
 .top {
     display: flex;
     position: relative;
